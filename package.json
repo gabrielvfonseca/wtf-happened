@@ -1,0 +1,57 @@
+{
+  "name": "wtf-happened",
+  "version": "0.1.0",
+  "description": "Plain-English 'what changed and why' for any git range. Offline, no API keys, grouped by intent.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "wtf": "dist/cli.js",
+    "wtf-happened": "dist/cli.js"
+  },
+  "files": ["dist"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "prepare": "husky",
+    "prepublishOnly": "npm run build && npm run test",
+    "release": "changeset version && npm install && npm run build && npm test && git add -A && git commit -m \"chore: release\" && changeset publish"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "diff",
+    "changelog",
+    "code-review",
+    "summary",
+    "offline",
+    "pr",
+    "wtf"
+  ],
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,mjs,cjs,json,md}": ["biome check --write"]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^3.0.3",
+    "@types/node": "^22.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "allowScripts": {
+    "@biomejs/biome@1.9.4": true,
+    "esbuild@0.27.7": true,
+    "esbuild@0.21.5": true,
+    "fsevents@2.3.3": true
+  }
+}
