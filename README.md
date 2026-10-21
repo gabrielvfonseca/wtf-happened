@@ -1,4 +1,4 @@
-# wtf-happened
+# WTF Happened
 
 Plain-English "what changed and why" for any git range — grouped by **intent**, not file. Offline, no API keys, no network, your code never leaves your machine.
 
