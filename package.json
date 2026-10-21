@@ -1,6 +1,6 @@
 {
   "name": "wtf-happened",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plain-English 'what changed and why' for any git range. Offline, no API keys, grouped by intent.",
   "type": "module",
   "license": "MIT",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
     "@types/node": "^22.10.0",
     "husky": "^9.1.7",

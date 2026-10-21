@@ -4,7 +4,6 @@
     "@changesets/changelog-github",
     { "repo": "gabrielfonseca/wtf-happened" }
   ],
-  "commit": "chore: release",
   "fixed": [],
   "linked": [],
   "access": "public",
