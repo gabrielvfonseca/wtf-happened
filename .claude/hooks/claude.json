@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "preCommit": ["npx lint-staged"],
+    "prePush": [
+      "npm run build",
+      "npm test",
+      "npm run typecheck",
+      "npm run lint"
+    ]
+  },
+  "settings": {
+    "primaryBinary": "wtf",
+    "packageName": "wtf-happened",
+    "pathAlias": "@/* -> src/*",
+    "testFramework": "vitest",
+    "linter": "biome",
+    "buildTool": "tsup",
+    "typeChecker": "typescript"
+  }
+}

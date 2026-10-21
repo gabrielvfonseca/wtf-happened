@@ -1,5 +1,4 @@
 import process from "node:process";
-import pkg from "../package.json";
 import {
   type GitOptions,
   currentBranch,
@@ -10,13 +9,14 @@ import {
   mergeBase,
   normalizeSince,
   resolveRef,
-} from "./git.js";
-import { parseUnifiedDiff } from "./parse/diff.js";
-import { renderJson } from "./render/json.js";
-import { renderMarkdown } from "./render/markdown.js";
-import { renderTerminal } from "./render/terminal.js";
-import { summarize } from "./summarize.js";
-import type { CommitInfo, Summary } from "./types.js";
+} from "@/git.js";
+import { parseUnifiedDiff } from "@/parse/diff.js";
+import { renderJson } from "@/render/json.js";
+import { renderMarkdown } from "@/render/markdown.js";
+import { renderTerminal } from "@/render/terminal.js";
+import { summarize } from "@/summarize.js";
+import type { CommitInfo, Summary } from "@/types.js";
+import pkg from "../package.json";
 
 const EMPTY_TREE = "4b825dc642cb6eb9a060e54bf8d69288fbee4904";
 
@@ -30,14 +30,14 @@ interface CliArgs {
   base?: string;
 }
 
-const USAGE = `wtf-happened — plain-English "what changed and why", offline.
+const USAGE = `wtf — plain-English "what changed and why", offline.
 
 Usage:
-  wtf-happened                 Smart summary (PR if on a branch, else recent log)
-  wtf-happened pr [base]       Summarize current branch vs base (default: origin/main)
-  wtf-happened since <when>    Everything since e.g. "2w", "yesterday", "2026-10-01"
-  wtf-happened log [n]         Last n commits (default 10)
-  wtf-happened commit <ref>    Summarize a single commit
+  wtf                          Smart summary (PR if on a branch, else recent log)
+  wtf pr [base]                Summarize current branch vs base (default: origin/main)
+  wtf since <when>             Everything since e.g. "2w", "yesterday", "2026-10-01"
+  wtf log [n]                  Last n commits (default 10)
+  wtf commit                 Summarize a single command
 
 Flags:
   --md, --markdown    Output Markdown (paste into a PR body)
@@ -49,11 +49,11 @@ Flags:
   --version           Show version
 
 Examples:
-  npx wtf-happened
-  wtf-happened pr origin/main
-  wtf-happened since 2w
-  wtf-happened log 20 --md
-  wtf-happened commit HEAD~3`;
+  wtf
+  wtf pr origin/main --md > pr-body.md
+  wtf since "2 weeks ago"
+  wtf log 20 --json
+  wtf commit HEAD~3`;
 
 function parseArgs(argv: string[]): CliArgs {
   const args: CliArgs = {

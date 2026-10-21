@@ -5,6 +5,10 @@
     "moduleResolution": "Bundler",
     "lib": ["ES2022"],
     "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": false,
@@ -15,5 +19,5 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "include": ["src", "test"]
+  "include": ["src", "tests"]
 }

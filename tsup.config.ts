@@ -1,3 +1,4 @@
+import path from "node:path";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -10,5 +11,8 @@ export default defineConfig({
   shims: true,
   banner: {
     js: "#!/usr/bin/env node",
+  },
+  alias: {
+    "@": path.resolve(__dirname, "src"),
   },
 });

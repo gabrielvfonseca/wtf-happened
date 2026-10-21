@@ -1,6 +1,6 @@
+import { classifyArea } from "@/classify/area.js";
+import type { Area } from "@/types.js";
 import { describe, expect, it } from "vitest";
-import { classifyArea } from "../src/classify/area.js";
-import type { Area } from "../src/types.js";
 
 const CASES: Array<[string, Area]> = [
   ["src/auth/oauth.ts", "auth"],

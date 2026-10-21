@@ -1,5 +1,4 @@
-import { AREA_LABELS } from "../classify/area.js";
-import type { IntentCluster, Summary } from "../types.js";
+import { AREA_LABELS } from "@/classify/area.js";
 import {
   bold,
   cyan,
@@ -11,7 +10,8 @@ import {
   pluralize,
   red,
   yellow,
-} from "./ansi.js";
+} from "@/render/ansi.js";
+import type { IntentCluster, Summary } from "@/types.js";
 
 const CHANGE_ICONS: Record<string, string> = {
   feature: green("✓"),

@@ -1,4 +1,4 @@
-import type { DiffHunk, FileDiff } from "../types.js";
+import type { DiffHunk, FileDiff } from "@/types.js";
 
 const FILE_HEADER = /^diff --git (?:"?a\/(.+?)"?) (?:"?b\/(.+?)"?)$/;
 const RENAME_FROM = /^rename from (.+)$/;

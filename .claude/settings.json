@@ -1,0 +1,26 @@
+{
+  "buildCommands": {
+    "build": "npm run build",
+    "test": "npm test",
+    "typecheck": "npm run typecheck",
+    "lint": "npm run lint",
+    "lint:fix": "npm run lint:fix"
+  },
+  "testCommands": {
+    "all": "npm test",
+    "specific": "npx vitest run tests/diff.test.ts"
+  },
+  "typecheckCommand": "npx tsc --noEmit",
+  "lintCommand": "npx biome check .",
+  "pathAliases": {
+    "@/*": "src/*"
+  },
+  "packageManager": "npm",
+  "nodeVersion": ">=18",
+  "primaryBinary": "wtf",
+  "packageName": "wtf-happened",
+  "testFramework": "vitest",
+  "linter": "biome",
+  "buildTool": "tsup",
+  "typeChecker": "typescript"
+}

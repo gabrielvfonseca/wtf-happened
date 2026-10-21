@@ -1,5 +1,5 @@
-import { clusterIntents } from "./classify/intent.js";
-import type { ChangeKind, CommitInfo, FileDiff, Summary } from "./types.js";
+import { clusterIntents } from "@/classify/intent.js";
+import type { ChangeKind, CommitInfo, FileDiff, Summary } from "@/types.js";
 
 const WIP_PATTERN = /^(wip:|wip$|fixup!|squash!|tmp|temp|stuff|updates?|misc)/i;
 

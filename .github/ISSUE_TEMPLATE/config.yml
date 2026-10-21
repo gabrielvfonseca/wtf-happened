@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: wtf-happened GitHub Discussions
+    url: https://github.com/gabrielfonseca/wtf-happened/discussions
+    about: Please ask and answer questions here.
+  - name: wtf-happened Issue Tracker
+    url: https://github.com/gabrielfonseca/wtf-happened/issues
+    about: Please report bugs and request features here.

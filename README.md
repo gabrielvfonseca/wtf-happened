@@ -3,7 +3,7 @@
 Plain-English "what changed and why" for any git range — grouped by **intent**, not file. Offline, no API keys, no network, your code never leaves your machine.
 
 ```
-$ npx wtf-happened
+$ wtf
 What happened — 14 commits · Oct 6–8 · 2 authors → main
 
   Auth & sessions         3 commits  +412 −95
@@ -30,16 +30,16 @@ Every git-diff summarizer we found (git-ai-summarize, sumgit, pr-agent, lumen, w
 npm i -g wtf-happened   # or: npx wtf-happened
 ```
 
-Binaries: `wtf-happened` and `wtf`.
+Binaries: `wtf` (primary) and `wtf-happened` (alias).
 
 ## Usage
 
 ```bash
-wtf-happened                 Smart summary: PR mode if on a branch ahead of its base, else recent log
-wtf-happened pr [base]       Summarize current branch vs base (default: origin/main)
-wtf-happened since <when>    Everything since "2w", "yesterday", or "2026-10-01"
-wtf-happened log [n]         Last n commits (default 10)
-wtf-happened commit     Summarize a single commit
+wtf                          Smart summary: PR mode if on a branch ahead of its base, else recent log
+wtf pr [base]                Summarize current branch vs base (default: origin/main)
+wtf since <when>             Everything since "2w", "yesterday", or "2026-10-01"
+wtf log [n]                  Last n commits (default 10)
+wtf commit             Summarize a single command
 
 Flags:
   --md, --markdown   Markdown output (paste into a PR body)
@@ -51,11 +51,11 @@ Flags:
 
 Examples:
 ```bash
-wtf-happened
-wtf-happened pr origin/main --md > pr-body.md
-wtf-happened since "2 weeks ago"
-wtf-happened log 20 --json
-wtf-happened commit HEAD~3
+wtf
+wtf pr origin/main --md > pr-body.md
+wtf since "2 weeks ago"
+wtf log 20 --json
+wtf commit HEAD~3
 ```
 
 ## How it works (offline)

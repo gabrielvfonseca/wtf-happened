@@ -1,0 +1,6 @@
+{
+  "$schema": "https://unpkg.com/ultracite@latest/schema.json",
+  "paths": {
+    "@/*": "src/*"
+  }
+}

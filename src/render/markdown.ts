@@ -1,6 +1,6 @@
-import { AREA_LABELS } from "../classify/area.js";
-import type { Summary } from "../types.js";
-import { pluralize } from "./ansi.js";
+import { AREA_LABELS } from "@/classify/area.js";
+import { pluralize } from "@/render/ansi.js";
+import type { Summary } from "@/types.js";
 
 export function renderMarkdown(summary: Summary): string {
   const lines: string[] = [];

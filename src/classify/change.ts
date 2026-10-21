@@ -1,4 +1,4 @@
-import type { ChangeKind, CommitInfo, FileDiff } from "../types.js";
+import type { ChangeKind, CommitInfo, FileDiff } from "@/types.js";
 
 const CONVENTIONAL =
   /^(feat|fix|refactor|perf|revert|docs|style|test|tests|chore|build|ci|deps?|dependency|dependencies|remove|deletion|rename)(\(.+\))?!?:\s*/i;

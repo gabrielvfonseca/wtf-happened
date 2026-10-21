@@ -1,7 +1,7 @@
+import { clusterIntents } from "@/classify/intent.js";
+import type { CommitInfo, FileDiff } from "@/types.js";
 /// <reference types="vitest" />
 import { describe, expect, it } from "vitest";
-import { clusterIntents } from "../src/classify/intent.js";
-import type { CommitInfo, FileDiff } from "../src/types.js";
 
 function commit(subject: string, files: string[]): CommitInfo {
   return {

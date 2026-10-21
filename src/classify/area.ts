@@ -1,4 +1,4 @@
-import type { Area } from "../types.js";
+import type { Area } from "@/types.js";
 
 interface AreaRule {
   area: Area;

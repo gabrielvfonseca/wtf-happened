@@ -1,7 +1,7 @@
+import { parseUnifiedDiff } from "@/parse/diff.js";
+import type { FileDiff } from "@/types.js";
 /// <reference types="vitest" />
 import { describe, expect, it } from "vitest";
-import { parseUnifiedDiff } from "../src/parse/diff.js";
-import type { FileDiff } from "../src/types.js";
 
 const DIFF = `diff --git a/src/auth/oauth.ts b/src/auth/oauth.ts
 new file mode 100644

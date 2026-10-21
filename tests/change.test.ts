@@ -1,13 +1,13 @@
-/// <reference types="vitest" />
-import { describe, expect, it } from "vitest";
 import {
   classifyCommit,
   classifyFromDiff,
   classifyFromMessage,
   dominantKind,
   parseConventional,
-} from "../src/classify/change.js";
-import type { ChangeKind, CommitInfo, FileDiff } from "../src/types.js";
+} from "@/classify/change.js";
+import type { ChangeKind, CommitInfo, FileDiff } from "@/types.js";
+/// <reference types="vitest" />
+import { describe, expect, it } from "vitest";
 
 describe("parseConventional", () => {
   it("parses feat with scope", () => {

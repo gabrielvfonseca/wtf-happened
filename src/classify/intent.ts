@@ -1,3 +1,5 @@
+import { AREA_LABELS, classifyArea } from "@/classify/area.js";
+import { classifyFromMessage, parseConventional } from "@/classify/change.js";
 import type {
   Area,
   ChangeKind,
@@ -5,9 +7,7 @@ import type {
   CommitInfo,
   FileDiff,
   IntentCluster,
-} from "../types.js";
-import { AREA_LABELS, classifyArea } from "./area.js";
-import { classifyFromMessage, parseConventional } from "./change.js";
+} from "@/types.js";
 
 const WIP_PATTERN = /^(wip:|wip$|fixup!|squash!|tmp|temp|stuff|updates?|misc)/i;
 
